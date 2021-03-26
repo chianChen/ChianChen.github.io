@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>小米6 國際版 root &amp; GCAM 過程 | ChiAn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="為小米六解鎖並 ROOT 再裝 Google Camera 與一些不錯用的 app。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小米6 國際版 root &amp; GCAM 過程">
+<meta property="og:url" content="http://anchi.idv.tw/2019/05/17/MI6Root/index.html">
+<meta property="og:site_name" content="ChiAn">
+<meta property="og:description" content="為小米六解鎖並 ROOT 再裝 Google Camera 與一些不錯用的 app。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2019-05-17T10:00:00.000Z">
+<meta property="article:modified_time" content="2019-05-24T04:00:00.000Z">
+<meta property="article:author" content="chian chen">
+<meta property="article:tag" content="Google Camera">
+<meta property="article:tag" content="root">
+<meta property="article:tag" content="解鎖">
+<meta property="article:tag" content="Google Pay">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="ChiAn" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ChiAn</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://anchi.idv.tw"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-MI6Root" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/05/17/MI6Root/" class="article-date">
+  <time class="dt-published" datetime="2019-05-17T10:00:00.000Z" itemprop="datePublished">2019-05-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%B1%B36/">米6</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      小米6 國際版 root &amp; GCAM 過程
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="小米6-國際版-root-amp-GCAM-過程"><a href="#小米6-國際版-root-amp-GCAM-過程" class="headerlink" title="小米6 國際版 root &amp; GCAM 過程"></a>小米6 國際版 root &amp; GCAM 過程</h2><ol>
+<li><a href="#%E8%A7%A3%E9%8E%96">解鎖</a></li>
+<li><a href="#RECOVERY">RECOVERY</a></li>
+<li><a href="#ROOT">ROOT</a></li>
+<li><a href="#%E6%94%B9%E6%AA%94%E6%A1%88">改檔案</a></li>
+<li>[安裝 GOOGLE camera](#Google Camera 成功)</li>
+<li>完成</li>
+<li>[Magisk ctsprofile false](#Magisk ctsprofile false)</li>
+</ol>
+<h2 id="解鎖"><a href="#解鎖" class="headerlink" title="解鎖"></a>解鎖</h2><ol>
+<li>首先到 <a target="_blank" rel="noopener" href="https://www.miui.com/unlock/index.html">解鎖小米手機</a> 申請解鎖，申請後須等待三天審核通過，如果已有權限將會自動跳轉至解鎖工具下載頁。</li>
+<li>再到手機中登入已有解鎖權限的小米帳號，並進入 <strong>設定 -&gt; 開發者選項 -&gt; 裝置解鎖狀態</strong> 中綁定帳號與設備。</li>
+<li>登錄成功後，手機進入FASTBOOT模式(關機後，同時按住開機鍵與音量下鍵)</li>
+<li>我是有先執行MiUsbDriver.exe</li>
+<li>執行剛剛載的 miflash_unlock.exe，開啟後登入小米帳號，就可以開始解鎖<br><strong>這裡我有遇到在 設定裝置解鎖狀態綁定 後三天才可解鎖</strong></li>
+<li>執行完畢後就完成小米解鎖囉</li>
+</ol>
+<h2 id="開啟ROOT"><a href="#開啟ROOT" class="headerlink" title="開啟ROOT"></a>開啟ROOT</h2><p>原以為 到安全中心 -&gt; 應用管理 -&gt; 權限 就可以開啟了<br><strong>結果國際開發版不支援</strong><br>只好在自己刷 ROOT 權限了</p>
+<h2 id="RECOVERY"><a href="#RECOVERY" class="headerlink" title="RECOVERY"></a>RECOVERY</h2><ul>
+<li>先下載 <a target="_blank" rel="noopener" href="http://tw.miui.com/thread-25375-1-1.html">http://tw.miui.com/thread-25375-1-1.html</a> 提供的 <a href="chrome-extension://bigefpfhnfcobdlfbedofhhaibnlghod/mega/secure.html#!0tcSUI6A!MXzvhLmERzhwcTX0doluSckuqMRzFLbXrqnlAWPEySM">adb-setup-1.4.3 .exe</a></li>
+<li>下載 <a target="_blank" rel="noopener" href="https://twrp.me/xiaomi/xiaomimi6.html">TWRP for Xiaomi Mi 6</a> 選 Primary (Americas) 下載 <a target="_blank" rel="noopener" href="https://dl.twrp.me/sagit/twrp-3.3.0-1-sagit.img.html">twrp-3.3.0-1-sagit.img</a></li>
+</ul>
+<p>以系統管理員執行 adb-setup-1.4.3 .exe<br>輸入 Y 並 enter 執行三次<br>跳出驅動程式安裝精靈點擊下一步完成<br>到 C:\adb<br>下載 <a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">官方提供的ADB</a> 並把 C:\adb 裡面的四個檔替換掉</p>
+<p>手機進入FASTBOOT(關機後長按電源鍵與音量下鍵)<br>手機與電腦連接<br>開啟命令提示字元<br>輸入指令 fastboot devices<br>可看回應 xxxxxxxx fastboot 代表成功連結手機的 Fastboot</p>
+<p>再把早前下載的 <strong>twrp-3.3.0-1-sagit.img</strong> 放到D槽</p>
+<p>命令提示字元 輸入<br>fastboot flash recovery D:\twrp-3.3.0-1-sagit.img<br>得到 Fnished. 成功<br>長按電源鍵與音量上鍵直到進入 Recovery</p>
+<h2 id="ROOT"><a href="#ROOT" class="headerlink" title="ROOT"></a>ROOT</h2><p>到 <a target="_blank" rel="noopener" href="https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445">official XDA thread</a> 下載 Magisk<br>直接把壓縮檔放到手機<br>再把手機回到 Recovery 模式<br>選安裝 選擇剛剛放入的 zip 檔<br>滑動滑塊以安裝 Magisk<br>最後點擊 restart</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases/">在此處下載最新的Magisk Manager APK</a> 安裝他</p>
+<p>打開後看到一堆綠色標記代表成功</p>
+<h2 id="改檔案"><a href="#改檔案" class="headerlink" title="改檔案"></a>改檔案</h2><p>下載並運行 終端模擬器</p>
+<p>在命令行介面輸入 SU enter</p>
+<p>授予終端機 root 權限 完成後就具有 root 權限了</p>
+<p>繼續輸入 setprop persist.camera.HAL3.enabled 1 Enter鍵</p>
+<p>重啟手機</p>
+<h2 id="安裝-Google-Camera"><a href="#安裝-Google-Camera" class="headerlink" title="安裝 Google Camera"></a>安裝 Google Camera</h2><p><strong>但都沒成功 QQ</strong></p>
+<h2 id="Google-Camera-成功"><a href="#Google-Camera-成功" class="headerlink" title="Google Camera 成功"></a>Google Camera 成功</h2><p><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/mi-6/themes/support-gcam-hdr-mi6-t3758876/page128">[Support][Feedback] GCam HDR+ for Mi6</a></p>
+<p>使用最後一頁 <a target="_blank" rel="noopener" href="https://forum.xda-developers.com/member.php?u=1200086">zilan</a> 提供的模組與app</p>
+<p>模組裝完重啟並再裝 app 成功</p>
+<h2 id="Magisk-ctsprofile-false"><a href="#Magisk-ctsprofile-false" class="headerlink" title="Magisk ctsprofile false"></a>Magisk ctsprofile false</h2><p>安裝兩個  Magisk 模組以通過SafetyNet的檢查</p>
+<ol>
+<li>MagiskHide Props Config</li>
+<li>SafetyPatch</li>
+</ol>
+<p>通過後就可以使用 Google Pay 囉</p>
+<h2 id="APP"><a href="#APP" class="headerlink" title="APP"></a>APP</h2><ul>
+<li>YouTube Vanced</li>
+</ul>
+<h2 id="參考網址-amp-設定資料"><a href="#參考網址-amp-設定資料" class="headerlink" title="參考網址 &amp; 設定資料"></a>參考網址 &amp; 設定資料</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.miui.com/thread-3367802-1-1.html">小米手机解锁 Bootloader 教程以及常见问题</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.miui.com/thread-14767245-1-1.html">小米6使用Google Camera大幅提升拍照效果（不影响OTA）</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xda-developers.com/how-to-install-magisk/">How to Install Magisk</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.miui.com/thread-12263814-1-1.html">手把手教你怎么root（TWRP卡刷方式，持续更新）</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.celsoazevedo.com/files/android/google-camera/">Google Camera Port</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://anchi.idv.tw/2019/05/17/MI6Root/" data-id="ckmq4fxkf00005plt13x42cmt" data-title="小米6 國際版 root &amp; GCAM 過程" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Camera/" rel="tag">Google Camera</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Pay/" rel="tag">Google Pay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/root/" rel="tag">root</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%A3%E9%8E%96/" rel="tag">解鎖</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/23/blog-better/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          blog優化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/16/http%E8%BD%89https%E5%BE%8C%E9%81%87%E5%88%B0%E7%9A%84%E5%95%8F%E9%A1%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">http 轉 https 後遇到的問題</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/html/">html</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B1%B36/">米6</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CALC/" rel="tag">CALC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Camera/" rel="tag">Google Camera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Pay/" rel="tag">Google Pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo%E8%A8%AD%E5%AE%9A/" rel="tag">hexo設定</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/" rel="tag">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/images/" rel="tag">images</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/link/" rel="tag">link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/root/" rel="tag">root</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E9%A1%9E%E8%A8%AD%E5%AE%9A/" rel="tag">分類設定</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%99%E7%B1%A4%E8%A8%AD%E5%AE%9A/" rel="tag">標籤設定</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9C%AC/" rel="tag">版本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%A3%E9%8E%96/" rel="tag">解鎖</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CALC/" style="font-size: 10px;">CALC</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Google-Camera/" style="font-size: 10px;">Google Camera</a> <a href="/tags/Google-Pay/" style="font-size: 10px;">Google Pay</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo%E8%A8%AD%E5%AE%9A/" style="font-size: 10px;">hexo設定</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/images/" style="font-size: 10px;">images</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/link/" style="font-size: 10px;">link</a> <a href="/tags/next/" style="font-size: 10px;">next</a> <a href="/tags/root/" style="font-size: 10px;">root</a> <a href="/tags/%E5%88%86%E9%A1%9E%E8%A8%AD%E5%AE%9A/" style="font-size: 10px;">分類設定</a> <a href="/tags/%E6%A8%99%E7%B1%A4%E8%A8%AD%E5%AE%9A/" style="font-size: 10px;">標籤設定</a> <a href="/tags/%E7%89%88%E6%9C%AC/" style="font-size: 10px;">版本</a> <a href="/tags/%E8%A7%A3%E9%8E%96/" style="font-size: 10px;">解鎖</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/14/%E8%A8%AD%E5%AE%9A%E5%9C%96%E7%89%87%E7%BD%AE%E4%B8%AD%E9%A1%AF%E7%A4%BA/">設定圖片置中顯示</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/putDataInFile/">PHP抓資料存成檔案</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/23/blog-better/">blog優化</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/17/MI6Root/">小米6 國際版 root &amp; GCAM 過程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 chian chen<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
