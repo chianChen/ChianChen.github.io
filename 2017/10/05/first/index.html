@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | Hexo</title>
+  <title>first | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Github SSH 連線打開git bash，查看是否已經存在ssh秘鑰 12cd ~&#x2F;.sshls 生成ssh秘鑰 1ssh-keygen -C &quot;your_email@example.com&quot; 在 &#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh 路徑下看到剛生成的文件： id_rsa 和 id_rsa.pub，即公鑰和私鑰。 在GitHub帳戶中添加公鑰  登錄你的gith">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2021/03/26/hello-world/index.html">
+<meta property="og:title" content="first">
+<meta property="og:url" content="http://example.com/2017/10/05/first/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Github SSH 連線打開git bash，查看是否已經存在ssh秘鑰 12cd ~&#x2F;.sshls 生成ssh秘鑰 1ssh-keygen -C &quot;your_email@example.com&quot; 在 &#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh 路徑下看到剛生成的文件： id_rsa 和 id_rsa.pub，即公鑰和私鑰。 在GitHub帳戶中添加公鑰  登錄你的gith">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-26T08:05:18.739Z">
-<meta property="article:modified_time" content="2021-03-26T08:05:18.739Z">
+<meta property="article:published_time" content="2017-10-05T03:10:39.000Z">
+<meta property="article:modified_time" content="2020-10-10T15:53:35.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 <body>
   <div id="container">
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-first" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/03/26/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-03-26T08:05:18.739Z" itemprop="datePublished">2021-03-26</time>
+    <a href="/2017/10/05/first/" class="article-date">
+  <time class="dt-published" datetime="2017-10-05T03:10:39.000Z" itemprop="datePublished">2017-10-05</time>
 </a>
     
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      first
     </h1>
   
 
@@ -95,24 +95,42 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="Github-SSH-連線"><a href="#Github-SSH-連線" class="headerlink" title="Github SSH 連線"></a>Github SSH 連線</h1><p>打開git bash，查看是否已經存在ssh秘鑰</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>生成ssh秘鑰</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>在 /c/Users/you/.ssh 路徑下看到剛生成的文件：</p>
+<p><code>id_rsa</code> 和 <code>id_rsa.pub</code>，即公鑰和私鑰。</p>
+<p>在GitHub帳戶中添加公鑰</p>
+<ul>
+<li>登錄你的github，頭像處下拉框選擇settings。</li>
+<li>進入設置頁後點擊側邊欄的 <code>SSH and GPG keys</code> 按鈕。</li>
+<li><code>New SSH key</code> 裡的 title 可以任意填，並且將上一步驟生成的 id_rsa.pub 的內容複製到這裡的 key 輸入框中</li>
+</ul>
+<p>確認完成 github SSH 連線</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>完成</p>
+<h1 id="hexo-指令"><a href="#hexo-指令" class="headerlink" title="hexo 指令"></a>hexo 指令</h1><p>清除快取檔案 (db.json) 和已產生的靜態檔案 (public)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>產生靜態檔案 (hexo generate)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g (-d)</span><br><span class="line">#先產生靜態網站再部屬</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>部署網站 (hexo deploy)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d (-g)</span><br><span class="line">#在部屬前先產生靜態網站</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>啟動伺服器 (hexo server)，啟動後 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="參考網址-amp-設定資料"><a href="#參考網址-amp-設定資料" class="headerlink" title="參考網址 &amp; 設定資料"></a>參考網址 &amp; 設定資料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog" title="令狐葱@前端笔记">手把手教你使用 Hexo + Github Pages 搭建个人独立博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/commands.html" title="hexo.io">Hexo 指令</a></li>
+<li><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/getting-started.html" title="NexT 使用文檔">NexT 主題使用頁</a></li>
+<li><a target="_blank" rel="noopener" href="https://read01.com/zh-tw/G38kkO.html#.WdiJ6VuCypq" title="使用ssh連接gitHub - 壹讀">SSH秘鑰生成</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/26/hello-world/" data-id="ckmq0tpt10000yglt0unp9xme" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2017/10/05/first/" data-id="ckmq4fxkj00015plt5u13hqxr" data-title="first" class="article-share-link">Share</a>
       
       
       
@@ -122,11 +140,15 @@
     
 <nav id="article-nav">
   
-  
-    <a href="/2020/10/10/test/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+    <a href="/2019/05/03/second/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          自動部屬設定
+        
+      </div>
     </a>
+  
   
 </nav>
 
