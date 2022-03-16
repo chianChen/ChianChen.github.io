@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: 標籤設定 | ChiAn</title>
+  <title>ChiAn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="python ssl 更新執行 urllib.request 會出現下列錯誤Traceback (most recent call last):  File “&#x2F;Library&#x2F;Frameworks&#x2F;Python.framework&#x2F;Versions&#x2F;3.8&#x2F;lib&#x2F;python3.8&#x2F;urllib&#x2F;request.py”, line 1354, in do_open    h.request(">
+<meta property="og:type" content="article">
 <meta property="og:title" content="ChiAn">
-<meta property="og:url" content="http://anchi.idv.tw/tags/%E6%A8%99%E7%B1%A4%E8%A8%AD%E5%AE%9A/index.html">
+<meta property="og:url" content="http://anchi.idv.tw/2021/03/26/python%20ssl%20%E6%9B%B4%E6%96%B0/index.html">
 <meta property="og:site_name" content="ChiAn">
+<meta property="og:description" content="python ssl 更新執行 urllib.request 會出現下列錯誤Traceback (most recent call last):  File “&#x2F;Library&#x2F;Frameworks&#x2F;Python.framework&#x2F;Versions&#x2F;3.8&#x2F;lib&#x2F;python3.8&#x2F;urllib&#x2F;request.py”, line 1354, in do_open    h.request(">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-03-26T08:05:18.739Z">
+<meta property="article:modified_time" content="2022-03-15T08:59:52.196Z">
 <meta property="article:author" content="chian chen">
 <meta name="twitter:card" content="summary">
   
@@ -32,7 +36,7 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -69,39 +73,62 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/05/03/second/" class="archive-article-date">
-  <time class="dt-published" datetime="2019-05-02T16:00:00.000Z" itemprop="datePublished">5月 3</time>
+        <section id="main"><article id="post-python ssl 更新" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/26/python%20ssl%20%E6%9B%B4%E6%96%B0/" class="article-date">
+  <time class="dt-published" datetime="2021-03-26T08:05:18.739Z" itemprop="datePublished">2021-03-26</time>
 </a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/03/second/">自動部屬設定</a>
-    </h1>
-  
-
-    </header>
+    
   </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="python-ssl-更新"><a href="#python-ssl-更新" class="headerlink" title="python ssl 更新"></a>python ssl 更新</h2><p>執行 urllib.request 會出現下列錯誤<br>Traceback (most recent call last):<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py”, line 1354, in do_open<br>    h.request(req.get_method(), req.selector, req.data, headers,<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/http/client.py”, line 1252, in request<br>    self._send_request(method, url, body, headers, encode_chunked)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/http/client.py”, line 1298, in _send_request<br>    self.endheaders(body, encode_chunked=encode_chunked)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/http/client.py”, line 1247, in endheaders<br>    self._send_output(message_body, encode_chunked=encode_chunked)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/http/client.py”, line 1007, in _send_output<br>    self.send(msg)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/http/client.py”, line 947, in send<br>    self.connect()<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/http/client.py”, line 1421, in connect<br>    self.sock = self._context.wrap_socket(self.sock,<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/ssl.py”, line 500, in wrap_socket<br>    return self.sslsocket_class._create(<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/ssl.py”, line 1040, in _create<br>    self.do_handshake()<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/ssl.py”, line 1309, in do_handshake<br>    self._sslobj.do_handshake()<br>ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1131)</p>
+<p>During handling of the above exception, another exception occurred:</p>
+<p>Traceback (most recent call last):<br>  File “/Users/niusnews-3umnhp/Downloads/py/test.py”, line 2, in <module><br>    r = urllib.request.urlopen(‘<a target="_blank" rel="noopener" href="https://google.com&/#39;">https://google.com&#39;</a>)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py”, line 222, in urlopen<br>    return opener.open(url, data, timeout)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py”, line 525, in open<br>    response = self._open(req, data)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py”, line 542, in _open<br>    result = self._call_chain(self.handle_open, protocol, protocol +<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py”, line 502, in _call_chain<br>    result = func(*args)<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py”, line 1397, in https_open<br>    return self.do_open(http.client.HTTPSConnection, req,<br>  File “/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py”, line 1357, in do_open<br>    raise URLError(err)<br>urllib.error.URLError: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1131)&gt;</p>
+<p>上網查一下應該是ssl憑證需要更新</p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>sudo /Applications/Python\ 3.8/Install\ Certificates.command</p>
+<p>記得版本需要改成自己的版本</p>
+<h2 id="也有另一方法"><a href="#也有另一方法" class="headerlink" title="也有另一方法"></a>也有另一方法</h2><p>就是不要驗證ssl憑證</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request</span><br><span class="line">import ssl</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ssl._create_default_https_context &#x3D; ssl._create_unverified_context</span><br><span class="line">r &#x3D; urllib.request.urlopen(&#39;https:&#x2F;&#x2F;google.com&#39;)</span><br><span class="line">print(r.status)</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://anchi.idv.tw/2021/03/26/python%20ssl%20%E6%9B%B4%E6%96%B0/" data-id="cl0syqjn400098iltbucl283l" data-title="" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/14/%E8%A8%AD%E5%AE%9A%E5%9C%96%E7%89%87%E7%BD%AE%E4%B8%AD%E9%A1%AF%E7%A4%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">設定圖片置中顯示</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
